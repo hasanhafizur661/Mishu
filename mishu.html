@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Love Mishu ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      text-align: center;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 3em;
+      margin-top: 40px;
+      color: #fff;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    }
+    p {
+      font-size: 1.3em;
+      margin: 20px auto;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+    .heart {
+      color: #ff2d55;
+      font-size: 2em;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
+    }
+    .container {
+      margin-top: 50px;
+    }
+    .love-note {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 30px;
+      margin: 30px auto;
+      width: 70%;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 1em;
+      color: #fff;
+    }
+    /* floating hearts animation */
+    .floating-heart {
+      position: fixed;
+      bottom: -50px;
+      color: #ff2d55;
+      font-size: 24px;
+      animation: rise 6s linear infinite;
+    }
+    @keyframes rise {
+      from { transform: translateY(0) scale(1); opacity: 1; }
+      to { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>❤️ For My Beautiful Wife Mishu ❤️</h1>
+  <div class="container">
+    <p class="love-note">
+      My dearest Mishu,<br><br>
+      You are the sunshine of my mornings, the moonlight of my nights, and the love that makes my heart beat. 💕<br><br>
+      Every day with you feels like a blessing, and I’m so grateful to call you my wife. 🌸<br><br>
+      Forever yours,<br>
+      <strong>With Love ❤️</strong>
+    </p>
+  </div>
+  <div class="footer">Made with infinite love just for you 💖</div>
+
+  <!-- floating hearts -->
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('floating-heart');
+      heart.textContent = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = Math.random() * 20 + 20 + 'px';
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }
+    setInterval(createHeart, 800);
+  </script>
+</body>
+</html>
